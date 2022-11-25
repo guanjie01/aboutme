@@ -13,22 +13,11 @@
 
     <meta name="keywords" content="minimal academic" />
 
-    <!-- <link rel="canonical" href="https://minimal-light.yyliu.net/" /> -->
-
     <link rel="shortcut icon" type="image/png" href="Photo.ico" />
 
-    <link
-      rel="stylesheet"
-      href="academicons.min.css"
-      integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw="
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="all.min.css"
-      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="academicons.min.css" />
+
+    <link rel="stylesheet" href="all.min.css" />
 
     <link rel="stylesheet" href="style.css" />
     <link
@@ -38,189 +27,241 @@
       href="translateelement.css"
     />
   </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+  <script type="text/javascript">
+    let isHeaderShown;
+    let isAboutMeShown;
+    let isWorkExperienceShown;
+    let isProjectShown;
+
+    function sleep(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      console.log("wasdvasdf");
+      document.getElementById("hd").style.display = "none";
+      document.getElementById("about-me").style.display = "none";
+      document.getElementById("work-experience").style.display = "none";
+      document.getElementById("project").style.display = "none";
+      document.getElementById("Awards").style.display = "none";
+      document.getElementById('reference').style.display = "none";
+    });
+
+    document.addEventListener("mouseover", async function () {
+      document.getElementById("hd").style.display = "block";
+      await sleep(1000);
+      document.getElementById("about-me").style.display = "block";
+
+      await sleep(1000);
+      document.getElementById("work-experience").style.display = "block";
+
+      await sleep(1000);
+      document.getElementById("project").style.display = "block";
+
+      await sleep(1000);
+      document.getElementById("Awards").style.display = "block";
+      await sleep(1000);
+      document.getElementById("reference").style.display = "block";
+    });
+
+    
+  </script>
   <body data-new-gr-c-s-check-loaded="14.1087.0" data-gr-ext-installed="">
     <div class="wrapper">
-      <header>
+      <header id="hd">
         <a class="image avatar"
           ><img src="Photo.jpg" alt="avatar" oncontextmenu="return false"
         /></a>
 
         <h1>Guanjie(Tom)Wang</h1>
-        
+
         MSc Student
         <br />
 
         SCSE, NTU
 
         <br />
-        <a href="mailto: guanjie.tom.wang@gmail.com">guanjie.tom.wang@gmail.com</a>
-        <br />
-        <br />
+        <a href="mailto: guanjie.tom.wang@gmail.com"
+          >guanjie.tom.wang@gmail.com</a
+        >
       </header>
+
       <section>
-        <h2 id="about-me">About Me</h2>
-        <p>
-          I am a master student in the<a
-            href="https://www.ntu.edu.sg/scse"
-            target="_blank"
-          >
-            School of Computer Science and Engineering at Nanyang Technological
-            University (NTU), Singapore.</a
-          >
-          My research area is cybersecurity.
-          <br />
-          <br />
-          I received my BSc in Computer Science with Sexton Distinction (1st
-          Class Distinction) from
-          <a
-            href="https://www.dal.ca/faculty/computerscience.html"
-            target="_blank"
-            >Dalhousie University (DAL)</a
-          >, Halifax, NS, Canada in 2021.
-          <br />
-          <br />
-          After graduation, I worked on Android ROM development, focusing on
-          wireless application development and Framework development (LE_Audio,
-          Miracast).
-        </p>
+        <div id="about-me" onload="showAboutMe()">
+          <h2>About Me</h2>
 
-        <h2 id="Work-Experience">Work Experience</h2>
-        <p>
-          <strong>BlackShark Technology Co., Ltd.<br /> </strong>
-        </p>
-        <p>
-          <em>Full-time Software Developer of System Application Department</em>
-        </p>
-        <ul>
-          <li>
-            Participated in JoyUI screen casting project development; achieved
-            device detection, connection, and casting with Wi-Fi Display
-          </li>
-          <li>
-            Conducted feasibility analysis with the product manager,
-            independently wrote the development document
-          </li>
-          <li>
-            Conducted feasibility analysis with the product manager,
-            independently wrote the development document
-          </li>
-          <li>
-            Constructed the application interface with Custom View,
-            Preferencefragment, and AlertDialog
-          </li>
-          <li>
-            Separated modules with the MVP design pattern; handled the device
-            scanning, connection, and statistics tasks with AsyncTask, Service,
-            HandlerThread; performed the IPC with Callback, EventBus, and
-            Handler; improved system responding time by 40%
-          </li>
-          <li>
-            Implemented Bonjour protocol instead of Wi-Fi P2P to discover
-            devices, improved device discovery rate by 30%
-          </li>
-        </ul>
-
-        <h2 id="project">Projects</h2>
-        <p>
-          <strong>Beauty Camera</strong>
-        </p>
-        <ul>
-          <li>
-            Developed an Android smart camera application; implemented real-time
-            object detection, face detection, background replacement and image
-            super-resolution, style transformation, and portrait keying using
-            TensorFlow Lite models and OpenCV
-          </li>
-          <li>
-            Followed MVC design pattern; applied NNAPI for the image inference
-            task, reduced the 50% processing time
-          </li>
-          <li>
-            Constructed the application interface with Custom View,
-            Preferencefragment, and AlertDialog
-          </li>
-          <li>
-            Stored the user information and asserts with Shared Preferences and
-            SQLite
-          </li>
-          <li>
-            Validated module's function and UI response with Junit test and
-            Espresso Test, reached the coverage of 85%
-          </li>
-        </ul>
-
-        <p>
-          <strong>Recipe Sharing Website</strong>
-        </p>
-        <ul>
-          <li>
-            Built the web application (Python, Flask, HTML, JS, CSS, Docker) and
-            three RESTful APIs on the AWS for facilitating multiple users to
-            upload their recipes for others' reference
-          </li>
-          <li>
-            Ensured the security of module processing and data transmission with
-            AWS VPC, Secret Manager, and API Gateway
-          </li>
-          <li>
-            Performed black box testing, white box testing, and API testing with
-            Postman, reaching the coverage of 90%
-          </li>
-        </ul>
-
-        <p>
-          <strong>Athlete Monitor Application</strong>
-        </p>
-        <ul>
-          <li>
-            Collaborated with a team of four members to develop an Android
-            fitness application based on agile development principles that allow
-            users to register to the system, communicate with others, and record
-            their training history
-          </li>
-          <li>
-            Applied the OkHttp, AES-128, and Firebase to perform the network
-            interaction, data encryption, and data storage
-          </li>
-          <li>
-            Conducted unit tests using JUnit and UI tests with Espresso Test,
-            reaching the coverage of 85%
-          </li>
-        </ul>
-
-        <h2 id="Awards">Awards</h2>
-        <ul>
-          <em>
-            <li>Sexton Distinction (First Class Distinction)</li>
-            <li>
-              The Sexton Scholar Award for 2019 Academic Year and 2020/2021 fall
-              & winter term;
-            </li>
-            <li>2021 Dalhousie In-Course Scholarship</li>
-            <li>2018/2019 Winter & 2020/2021 Summer Dean's List Award</li>
-          </em>
-        </ul>
-
-        <p>
-          <br />
-          <br />
-          <br />
-        </p>
-
-        <br />
-
-        <p>
-          <small
-            >Powered by Jekyll and
-            <a
-              href="https://github.com/yaoyao-liu/minimal-light"
+          <p>
+            I am a master student in the<a
+              href="https://www.ntu.edu.sg/scse"
               target="_blank"
-              rel="noopener"
-              >Minimal Light</a
             >
-            theme.</small
-          >
-        </p>
+              School of Computer Science and Engineering at Nanyang
+              Technological University (NTU), Singapore.</a
+            >
+            My research area is cybersecurity.
+            <br />
+            <br />
+            I received my BSc in Computer Science with Sexton Distinction (1st
+            Class Distinction) from
+            <a
+              href="https://www.dal.ca/faculty/computerscience.html"
+              target="_blank"
+              >Dalhousie University (DAL)</a
+            >, Halifax, NS, Canada in 2021.
+            <br />
+            <br />
+            After graduation, I worked on Android ROM development, focusing on
+            wireless application development and Framework development
+            (LE_Audio, Miracast).
+          </p>
+        </div>
+        <div id="work-experience">
+          <h2>Work Experience</h2>
+          <p>
+            <strong>BlackShark Technology Co., Ltd.<br /> </strong>
+          </p>
+          <p>
+            <em
+              >Full-time Software Developer of System Application Department</em
+            >
+          </p>
+          <ul>
+            <li>
+              Participated in JoyUI screen casting project development; achieved
+              device detection, connection, and casting with Wi-Fi Display
+            </li>
+            <li>
+              Conducted feasibility analysis with the product manager,
+              independently wrote the development document
+            </li>
+            <li>
+              Conducted feasibility analysis with the product manager,
+              independently wrote the development document
+            </li>
+            <li>
+              Constructed the application interface with Custom View,
+              Preferencefragment, and AlertDialog
+            </li>
+            <li>
+              Separated modules with the MVP design pattern; handled the device
+              scanning, connection, and statistics tasks with AsyncTask,
+              Service, HandlerThread; performed the IPC with Callback, EventBus,
+              and Handler; improved system responding time by 40%
+            </li>
+            <li>
+              Implemented Bonjour protocol instead of Wi-Fi P2P to discover
+              devices, improved device discovery rate by 30%
+            </li>
+          </ul>
+        </div>
+
+        <div id="project">
+          <h2>Projects</h2>
+          <p>
+            <strong>Beauty Camera</strong>
+          </p>
+          <ul>
+            <li>
+              Developed an Android smart camera application; implemented
+              real-time object detection, face detection, background replacement
+              and image super-resolution, style transformation, and portrait
+              keying using TensorFlow Lite models and OpenCV
+            </li>
+            <li>
+              Followed MVC design pattern; applied NNAPI for the image inference
+              task, reduced the 50% processing time
+            </li>
+            <li>
+              Constructed the application interface with Custom View,
+              Preferencefragment, and AlertDialog
+            </li>
+            <li>
+              Stored the user information and asserts with Shared Preferences
+              and SQLite
+            </li>
+            <li>
+              Validated module's function and UI response with Junit test and
+              Espresso Test, reached the coverage of 85%
+            </li>
+          </ul>
+
+          <p>
+            <strong>Recipe Sharing Website</strong>
+          </p>
+          <ul>
+            <li>
+              Built the web application (Python, Flask, HTML, JS, CSS, Docker)
+              and three RESTful APIs on the AWS for facilitating multiple users
+              to upload their recipes for others' reference
+            </li>
+            <li>
+              Ensured the security of module processing and data transmission
+              with AWS VPC, Secret Manager, and API Gateway
+            </li>
+            <li>
+              Performed black box testing, white box testing, and API testing
+              with Postman, reaching the coverage of 90%
+            </li>
+          </ul>
+
+          <p>
+            <strong>Athlete Monitor Application</strong>
+          </p>
+          <ul>
+            <li>
+              Collaborated with a team of four members to develop an Android
+              fitness application based on agile development principles that
+              allow users to register to the system, communicate with others,
+              and record their training history
+            </li>
+            <li>
+              Applied the OkHttp, AES-128, and Firebase to perform the network
+              interaction, data encryption, and data storage
+            </li>
+            <li>
+              Conducted unit tests using JUnit and UI tests with Espresso Test,
+              reaching the coverage of 85%
+            </li>
+          </ul>
+        </div>
+
+        <div id="Awards">
+          <h2>Awards</h2>
+          <ul>
+            <em>
+              <li>Sexton Distinction (First Class Distinction)</li>
+              <li>
+                The Sexton Scholar Award for 2019 Academic Year and 2020/2021
+                fall & winter term;
+              </li>
+              <li>2021 Dalhousie In-Course Scholarship</li>
+              <li>2018/2019 Winter & 2020/2021 Summer Dean's List Award</li>
+            </em>
+          </ul>
+        </div>
+        <div id="reference">
+          <p>
+            <br />
+            <br />
+            <br />
+          </p>
+
+          <br />
+
+          <p>
+            <small
+              >Powered by Jekyll and
+              <a
+                href="https://github.com/yaoyao-liu/minimal-light"
+                target="_blank"
+                rel="noopener"
+                >Minimal Light</a
+              >
+              theme.</small
+            >
+          </p>
+        </div>
       </section>
     </div>
   </body>
