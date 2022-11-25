@@ -30,38 +30,30 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 
   <script type="text/javascript">
+    var modules = [
+      "hd",
+      "about-me",
+      "work-experience",
+      "project",
+      "Awards",
+      "reference",
+    ];
+
     function sleep(ms) {
       return new Promise((resolve) => setTimeout(resolve, ms));
     }
 
     document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("hd").style.display = "none";
-      document.getElementById("about-me").style.display = "none";
-      document.getElementById("work-experience").style.display = "none";
-      document.getElementById("project").style.display = "none";
-      document.getElementById("Awards").style.display = "none";
-      document.getElementById("reference").style.display = "none";
+      for (var i = 0; i < modules.length; i++) {
+        document.getElementById(modules[i]).style.display = "none";
+      }
     });
 
-    function bloack(ms) {
-      return new Promise((resolve) => setTimeout(resolve, ms));
-    }
-
     window.onload = async function loadPage() {
-      document.getElementById("hd").style.display = "block";
-      await sleep(1000);
-      document.getElementById("about-me").style.display = "block";
-
-      await sleep(1000);
-      document.getElementById("work-experience").style.display = "block";
-
-      await sleep(1000);
-      document.getElementById("project").style.display = "block";
-
-      await sleep(1000);
-      document.getElementById("Awards").style.display = "block";
-      await sleep(1000);
-      document.getElementById("reference").style.display = "block";
+      for (var i = 0; i < modules.length; i++) {
+        document.getElementById(modules[i]).style.display = "block";
+        await sleep(1000);
+      }
     };
   </script>
   <body data-new-gr-c-s-check-loaded="14.1087.0" data-gr-ext-installed="">
@@ -87,7 +79,6 @@
       <section>
         <div id="about-me">
           <h2>About Me</h2>
-
           <p>
             I am a master student in the<a
               href="https://www.ntu.edu.sg/scse"
@@ -113,6 +104,7 @@
             (LE_Audio, Miracast).
           </p>
         </div>
+
         <div id="work-experience">
           <h2>Work Experience</h2>
           <p>
@@ -237,14 +229,9 @@
             </em>
           </ul>
         </div>
-        <div id="reference">
-          <p>
-            <br />
-            <br />
-            <br />
-          </p>
 
-          <br />
+        <div id="reference">
+          <br /><br /><br /><br /><br /><br />
 
           <p>
             <small
