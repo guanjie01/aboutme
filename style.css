@@ -228,29 +228,29 @@ header {
   padding-top: 4em;
   text-align: center;
   animation: fadeInAnimation ease 2s;
-  animation-iteration-count: 1; 
+  animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
 #about-me {
   animation: fadeInAnimation ease 2s;
-  animation-iteration-count: 1; 
+  animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 #work-experience {
   animation: fadeInAnimation ease 2s;
-  animation-iteration-count: 1; 
+  animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
 #project {
   animation: fadeInAnimation ease 2s;
-  animation-iteration-count: 1; 
+  animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 #Awards {
   animation: fadeInAnimation ease 2s;
-  animation-iteration-count: 1; 
+  animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 header ul {

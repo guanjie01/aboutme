@@ -30,25 +30,24 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 
   <script type="text/javascript">
-    let isHeaderShown;
-    let isAboutMeShown;
-    let isWorkExperienceShown;
-    let isProjectShown;
-
     function sleep(ms) {
       return new Promise((resolve) => setTimeout(resolve, ms));
     }
+
     document.addEventListener("DOMContentLoaded", function () {
-      console.log("wasdvasdf");
       document.getElementById("hd").style.display = "none";
       document.getElementById("about-me").style.display = "none";
       document.getElementById("work-experience").style.display = "none";
       document.getElementById("project").style.display = "none";
       document.getElementById("Awards").style.display = "none";
-      document.getElementById('reference').style.display = "none";
+      document.getElementById("reference").style.display = "none";
     });
 
-    document.addEventListener("mouseover", async function () {
+    function bloack(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+
+    window.onload = async function loadPage() {
       document.getElementById("hd").style.display = "block";
       await sleep(1000);
       document.getElementById("about-me").style.display = "block";
@@ -63,9 +62,7 @@
       document.getElementById("Awards").style.display = "block";
       await sleep(1000);
       document.getElementById("reference").style.display = "block";
-    });
-
-    
+    };
   </script>
   <body data-new-gr-c-s-check-loaded="14.1087.0" data-gr-ext-installed="">
     <div class="wrapper">
@@ -88,7 +85,7 @@
       </header>
 
       <section>
-        <div id="about-me" onload="showAboutMe()">
+        <div id="about-me">
           <h2>About Me</h2>
 
           <p>
