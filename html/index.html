@@ -3,7 +3,6 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Guanjie Wang</title>
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -26,41 +25,8 @@
       charset="UTF-8"
       href="translateelement.css"
     />
+    <script src="../js/moduleVisbilityControl.js"></script>
   </head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-
-  <script type="text/javascript">
-    var modules = [
-      "hd",
-      "main",
-      "about-me",
-      "work-experience",
-      "project",
-      "Awards",
-      "reference",
-    ];
-
-    function sleep(ms) {
-      return new Promise((resolve) => setTimeout(resolve, ms));
-    }
-
-    document.addEventListener("DOMContentLoaded", async function () {
-      for (var i = 0; i < modules.length; i++) {
-        document.getElementById(modules[i]).style.display = "none";
-      }
-    });
-
-    window.onload = async function loadPage() {
-      document.getElementById("app").style.display = "block";
-      await sleep(1200);
-      document.getElementById("app").style.display = "none";
-      document.getElementById(modules[0]).style.display = "block";
-      for (var i = 1; i < modules.length; i++) {
-        document.getElementById(modules[i]).style.display = "block";
-        await sleep(1000);
-      }
-    };
-  </script>
 
   <noscript>
     <strong
@@ -83,7 +49,10 @@
     <div class="wrapper">
       <header id="hd">
         <a class="image avatar"
-          ><img src="../assert/Photo.jpg" alt="avatar" oncontextmenu="return false"
+          ><img
+            src="../assert/Photo.jpg"
+            alt="avatar"
+            oncontextmenu="return false"
         /></a>
 
         <h1>Guanjie(Tom)Wang</h1>
