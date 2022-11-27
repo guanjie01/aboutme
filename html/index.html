@@ -13,13 +13,13 @@
 
     <meta name="keywords" content="minimal academic" />
 
-    <link rel="shortcut icon" type="image/png" href="Photo.ico" />
+    <link rel="shortcut icon" type="image/png" href="../assert/Photo.ico" />
 
-    <link rel="stylesheet" href="academicons.min.css" />
+    <link rel="stylesheet" href="../css/academicons.min.css" />
 
-    <link rel="stylesheet" href="all.min.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link
       type="text/css"
       rel="stylesheet"
@@ -44,7 +44,7 @@
       return new Promise((resolve) => setTimeout(resolve, ms));
     }
 
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", async function () {
       for (var i = 0; i < modules.length; i++) {
         document.getElementById(modules[i]).style.display = "none";
       }
@@ -83,7 +83,7 @@
     <div class="wrapper">
       <header id="hd">
         <a class="image avatar"
-          ><img src="Photo.jpg" alt="avatar" oncontextmenu="return false"
+          ><img src="../assert/Photo.jpg" alt="avatar" oncontextmenu="return false"
         /></a>
 
         <h1>Guanjie(Tom)Wang</h1>
