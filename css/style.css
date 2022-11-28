@@ -231,11 +231,13 @@ header {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
-
-#about-me {
-  /* animation: fadeInAnimation ease 2s;
+nav {
+  text-align: center;
+  animation: 1s fadeInAnimation;
   animation-iteration-count: 1;
-  animation-fill-mode: forwards; */
+  animation-fill-mode: forwards;
+}
+#about-me {
   animation: 1s fadeInAnimation;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -252,6 +254,11 @@ header {
   animation-fill-mode: forwards;
 }
 #Awards {
+  animation: 1s fadeInAnimation;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+#reference {
   animation: 1s fadeInAnimation;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;

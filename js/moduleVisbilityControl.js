@@ -1,6 +1,7 @@
 var modules = [
   "hd",
   "main",
+  "nav",
   "about-me",
   "work-experience",
   "project",
