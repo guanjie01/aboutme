@@ -233,6 +233,7 @@ header {
 }
 nav {
   text-align: center;
+  font-size: large;
   animation: 1s fadeInAnimation;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
