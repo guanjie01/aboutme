@@ -1,13 +1,4 @@
-var modules = [
-  "hd",
-  "main",
-  "nav",
-  "about-me",
-  "work-experience",
-  "project",
-  "Awards",
-  "reference",
-];
+var modules = ["hd", "main", "nav", "project", "reference"];
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
